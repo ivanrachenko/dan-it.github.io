@@ -1,0 +1,125 @@
+.filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+}
+
+.filter .captions {
+    display: flex;
+    background-color: #fff;
+    height: 58px;
+}
+
+.filter .captions li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-color: #EBEDED;
+    border-style: solid;
+    border-width: 1px 0 1px 1px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.filter .captions li:last-child {
+    border-right-width: 1px;
+}
+
+
+.filter .captions li.active:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    right: 0;
+    background-color: #18cfab;
+    height: 2px;
+    box-sizing: border-box;
+    margin: 0 auto 0;
+}
+
+
+.filter .content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 70px 0;
+}
+
+.filter .content .outer {
+    position: relative;
+}
+
+.filter .content .outer:hover .info {
+    display: flex;
+}
+
+.filter .content .outer .info {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.filter .content .outer .info::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #18cfab;
+    height: 2px;
+    box-sizing: border-box;
+    margin: 0 auto 0;
+}
+
+.filter .content .outer .info .info-btn-outer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    height: 120px;
+}
+
+.filter .content .outer .info .info-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #18cfab;
+    border: #18cfab 1px solid;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.filter .content .outer .info .info-btn:hover {
+    color: #fff;
+    background-color: #18cfab;
+}
+
+.filter .content .outer .info .title {
+    color:  #18cfab;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 35px;
+    text-transform: uppercase;
+}
+
+.filter .content .outer .info .caption {
+    color:  #8a8a8a;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 16px;
+}
